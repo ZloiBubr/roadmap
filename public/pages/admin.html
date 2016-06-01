@@ -1,0 +1,8 @@
+<div class="admin">
+	<ul class="nav nav-pills nav-stacked admin__groups">
+  		<li ng-repeat="group in vm.groups" ng-class="{active: group === vm.selectedGroup}" ng-click="vm.selectGroup(group)"><a href="javascript:">{{group}}</a></li>
+	</ul>
+	<div class="admin__page" ng-include="vm.selectedViewUrl()">
+		
+	</div>
+<div>

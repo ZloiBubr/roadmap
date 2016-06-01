@@ -1,0 +1,26 @@
+<div class="card" ng-style="::{'background-color': card.color}">
+    <div>
+        <rpt-progress-bar ng-repeat="bar in card.progressBars" value="{{::bar.value}}" type="{{::bar.type}}" title="{{::bar.name}}"></rpt-progress-bar>
+        <a class="card-link" target="_blank" href="{{::card.url}}">{{::card.name}}</a>
+    </div>
+
+    <div class="card__details" ng-if="card.showDetails">
+    	<div ng-repeat="detail in card.details" title="{{::detail.name}}">
+    		<img class="card__details__icon" alt="{{::detail.name}}" ng-src="{{::detail.icon}}"/> {{::detail.value}}
+    	</div>
+    </div>
+
+    <div class="card__main-value" title="{{::card.mainValue.name}}">{{::card.mainValue.value | number : 0}}</div>
+    <div class="icons-bar card__icons-left">
+	    <div ng-repeat="icon in ::card.leftIcons" class="icon-bar__icon-wrapper">
+	        <img ng-if="::icon.icon" title="{{::icon.name}}" ng-show="::icon.value" alt="{{::icon.name}}" ng-src="{{::icon.icon}}" class="icons-bar__icon"/>
+	        <div title="{{::icon.name}}" ng-style="::{'background-color': icon.color }" ng-if="::!icon.icon" class="icons-bar__badge">{{::icon.value}}</div>
+	    </div>
+	</div>
+	<div class="icons-bar card__icons-right">
+	    <div ng-repeat="icon in ::card.rightIcons" class="icon-bar__icon-wrapper">
+	        <img ng-if="::icon.icon" title="{{::icon.name}}" ng-show="::icon.value" alt="{{::icon.name}}" ng-src="{{::icon.icon}}" class="icons-bar__icon"/>
+	        <div title="{{::icon.name}}" ng-style="::{'background-color': icon.color }" ng-if="::!icon.icon" class="icons-bar__badge">{{::icon.value}}</div>
+	    </div>
+	</div>
+</div>

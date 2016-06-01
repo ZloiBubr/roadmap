@@ -1,0 +1,17 @@
+{
+  "name": "ReportTool",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ZloiBubr/ReportTool",
+  "authors": [
+    "Aliaksei Trushchankou <aliaksei.trushchankou@gmail.com>"
+  ],
+  "description": "Report Tool",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

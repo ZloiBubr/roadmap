@@ -1,0 +1,6 @@
+<div class="icons-bar">
+    <div ng-repeat="icon in ::config" class="icon-bar__icon-wrapper">
+        <img ng-if="::icon.icon" title="{{::icon.name}}" ng-show="::evalExpression(icon.expression)" alt="{{::icon.name}}" ng-src="{{::icon.icon}}" class="icons-bar__icon"/>
+        <div title="{{::icon.name}}" ng-style="::{'background-color': icon.color }" ng-if="::!icon.icon" class="icons-bar__badge">{{::evalExpression(icon.expression)}}</div>        
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<ul class="list-group">
+	<li ng-repeat="total in config" class="list-group-item">
+	    {{total.name}}
+	    <span class="badge">
+	        <span ng-repeat="value in total.values" title="{{value.name}}">{{evalExpression(value.expression) | number: 0}}<span ng-if="!$last">/</span></span>
+	    </span>
+	</li>
+</ul>

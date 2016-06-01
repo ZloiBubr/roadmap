@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" ng-controller="appController">
+<head>
+    <meta charset="utf-8">
+    <title>Roadmap JIRA Companion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This tool created to improve JIRA reporting">
+    <meta name="author" content="Siarhei Hladkou">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css"/>
+
+    <!-- Libs -->
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/underscore.js"></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/js/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="/js/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/js/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/js/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script type="text/javascript" src="/js/ui-utils.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/angular-local-storage.js"></script>
+    <script type="text/javascript" src="/bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>
+
+    <!-- calculation for trends -->
+    <script type="text/javascript" src="/js/regression.js"></script>
+    <!-- highcharts to work with angular -->
+    <script type="text/javascript" src="/js/highcharts/highcharts-ng.js"></script>
+    <!-- highcharts new -->
+    <script type="text/javascript" src="/js/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="/js/highcharts/modules/exporting.js"></script>
+
+    <script type="text/javascript" src="/jsc/base-type-extensions.js"></script>
+
+    <script type="text/javascript" src="/jsc/app.js"></script>
+
+    <!-- Main Controllers/Routers -->
+    <script type="text/javascript" src="/jsc/app.controller.js"></script>
+    <script type="text/javascript" src="/jsc/authentication.factory.js"></script>
+    <script type="text/javascript" src="/jsc/userAuthentication.factory.js"></script>
+    <script type="text/javascript" src="/jsc/userRegistration.service.js"></script>
+    <script type="text/javascript" src="/pages/login.controller.js"></script>
+    <script type="text/javascript" src="/pages/register.controller.js"></script>
+    <script type="text/javascript" src="/jsc/token.interceptor.js"></script>
+    <script type="text/javascript" src="/jsc/router.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="/jsc/roadmapController.js"></script>
+    <script type="text/javascript" src="/jsc/versionController.js"></script>
+    <script type="text/javascript" src="/pages/admin.controller.js"></script>
+    <script type="text/javascript" src="/pages/users.controller.js"></script>
+    <script type="text/javascript" src="/pages/users.service.js"></script>
+
+    <script type="text/javascript">
+        // using to share nodejs files with angularjs
+        this.exports = {};
+    </script>
+    <script type="text/javascript" src="/jsc/Models/statusList.js"></script>
+    <script type="text/javascript" src="/jsc/versions.js"></script>
+
+    <script type="text/javascript" src="/jsc/filters/status.filter.js"></script>
+    <script type="text/javascript" src="/jsc/filters/filterMultiple.filter.js"></script>
+    <script type="text/javascript" src="/jsc/components/progress-bar.directive.js"></script>
+    <script type="text/javascript" src="/jsc/components/grid/card.directive.js"></script>
+    <script type="text/javascript" src="/jsc/components/grid/grid.directive.js"></script>
+    <script type="text/javascript" src="/jsc/components/summary.directive.js"></script>
+    <script type="text/javascript" src="/jsc/components/icons.directive.js"></script>
+    <script type="text/javascript" src="/jsc/components/legend.directive.js"></script>
+    <script type="text/javascript" src="/jsc/components/statuses.directive.js"></script>
+    <script type="text/javascript" src="/jsc/components/filter-totals.directive.js"></script>
+
+    <script type="text/javascript" src="/jsc/services/filter.service.js"></script>
+    <script type="text/javascript" src="/jsc/services/expressionEvaluator.service.js"></script>
+    <script type="text/javascript" src="/jsc/services/config.service.js"></script>
+
+    <script type="text/javascript" src="/jsc/components/grid/itemsToCardsMapper.service.js"></script>
+    <script type="text/javascript" src="/jsc/components/grid/itemsToGridModelMapper.service.js"></script>
+    <script type="text/javascript" src="/jsc/components/grid/cardsCache.service.js"></script>
+    <script type="text/javascript" src="/jsc/components/grid/gridCache.service.js"></script>
+    <script type="text/javascript" src="/jsc/filterState.service.js"></script>   
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/ios/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/ios/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/ios/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/ico/ios/apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" href="/ico/favicon.png">
+</head>
+<header ng-include="'pages/shared/mainMenu.html'">
+</header>
+<body>
+<section class="main" ui-view>
+</section>
+<footer>
+
+</footer>
+
+</body>
+</html>

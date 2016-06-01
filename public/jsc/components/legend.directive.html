@@ -1,0 +1,11 @@
+<div class="legend"> 
+	<div ng-repeat="icon in config.icons" class="legend__item">
+        <img ng-if="icon.icon" class="legend__icon" alt="{{icon.name}}" ng-src="{{icon.icon}}"/>
+        <img ng-if="icon.icons" class="legend__icon" ng-repeat="i in icon.icons" alt="{{icon.name}}" ng-src="{{i}}"/>
+        {{icon.name}}
+    </div>
+    <div class="legend__item" ng-repeat="bar in config.progressbars">
+        {{bar.name}}
+        <rpt-progress-bar value="100" type="{{bar.type}}"></rpt-progress-bar>
+    </div>
+</div>

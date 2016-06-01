@@ -1,0 +1,23 @@
+<div class="login-wrapper">
+	<div class="login-form center-block panel panel-default">
+		<div class="panel-body">
+			<legend>Roadmap Login</legend>
+			 <form ng-submit="login(user)">
+			 	<div class="form-group">
+				  <label for="username">Username</label>
+				  <input type="text" class="form-control" id="username" placeholder="Username" ng-model="user.username">
+				</div>
+				 
+				<div class="form-group">
+				  <label for="password">Password</label>
+				  <input type="password" class="form-control" id="password" placeholder="Password" ng-model="user.password">
+				</div>
+				<div ng-if="error" class="text-danger">{{error}}</div>
+
+				<input type="submit" class="btn btn-primary pull-right" value="Login" />
+			 	
+			 	<a href="#/register" class="pull-right btn">Register</a>
+			 </form>
+		</div>
+	</div>
+</div>

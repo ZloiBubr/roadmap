@@ -1,0 +1,22 @@
+<div ng-controller="UsersController as vm">
+	<table class="table table-hover users__users-table">
+		<thead>
+			<tr>
+				<th>#</th>
+		  		<th>Username</th>
+		  		<th>Active</th>
+			</tr>	
+		</thead>
+		<tbody>
+			<tr ng-repeat="user in vm.users" ng-class="{active: user === vm.selectedUser}">
+				<td>{{$index + 1}}</td>
+				<td>{{user.username}}</td>
+				<td>
+					<input type="checkbox" ng-model="user.active">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<button type="button" class="btn btn-primary" ng-click="vm.save()">Save</button>
+</div>

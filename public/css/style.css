@@ -1,0 +1,513 @@
+html{
+  height: 100%;
+}
+body {
+    float: left;
+    min-width: 100%;
+    height: 100%;
+}
+
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding-top: 70px;
+}
+
+a {
+    color: #007fa8;
+}
+
+table {
+    max-width: 4000px !important;
+}
+ /*------------------------------------Common---------------------------*/
+.progress_no_top_line > td {
+    border-top: none !important;
+}
+
+.vcenter {
+    vertical-align: middle !important;
+}
+
+.sorted_column{
+    cursor: pointer;
+}
+
+.spinner{
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: url('/img/Spinner.gif') no-repeat;
+    margin: auto;
+}
+
+.top_padding_15 {
+    padding-top: 15px;
+}
+
+/*------------------------------------End_Common---------------------------*/
+
+/*----------------------------------Dashboard------------------------------*/
+
+.glyphicon.glyphicon-sort{
+    font-size: 8pt;
+}
+
+/*----------------------------------End Dashboard------------------------------*/
+
+.progressTableMainHeader>tr>th
+{
+    vertical-align: top;
+}
+
+.headerSelectWidth
+{
+    width: auto;
+}
+
+.progress_fixed_width,
+.progress_fixed_width > td {
+    width: 150px;
+}
+
+.progress_table_no_end_line > table:last-child {
+    margin-bottom: 0;
+}
+
+.no-padding td,
+.no-padding a
+{
+ padding: 0 !important;
+}
+
+.list-group-item .checkbox{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.table-timesheet-hover > tbody > tr:hover > td,
+.table-timesheet-hover > tbody > tr:hover > th {
+    background-color: #d9edf7;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: #E0E0E0;
+}
+
+.hour-timesheet-color{
+    color: #CC6633;
+}
+
+.form-actions
+{
+    padding: 19px 0 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e5e5e5;
+}
+
+
+
+.help-icon
+{
+    cursor: help;
+}
+
+
+.red
+{
+    background-color: #ff8082 !important;
+}
+
+.open
+{
+    background-color: #fbfbfb !important;
+}
+
+.development {
+    background-color: #d9edf7;
+}
+
+.quality-assurance
+{
+    background-color: #fbdc8c !important;
+}
+
+.closed
+{
+    background-color: #7fc48c !important;
+    text-decoration: line-through !important;
+}
+
+.border-black {
+    border: solid thin black;
+}
+
+
+.key {
+    font: 25px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.summary {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.table_cell_border{
+    border-color: #0028c1 !important;
+    border-width: 1px !important;
+}
+
+.cards-table {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+.disp-block {
+    display: inline-block;
+    margin: 0px;
+}
+
+section.sidebar{
+    float: left;
+    width: 250px;
+}
+section.sideCollapseButton{
+    float: left;
+    font-size: 30px;
+    border: 1px solid #ddd;
+    width: 37px;
+    margin-left: 1px;
+    background-color: #d9edf7
+}
+
+section.contentShowSidebar {
+    margin-left: 260px;
+}
+section.contentHideSidebar {
+    padding-left: 38px;
+}
+
+.completion-red {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.completion-yellow {
+    background-color: #ffff00;
+    color: brown;
+}
+
+.completion-green {
+    background-color: lightgreen;
+    color: green;
+}
+
+.completion-blue {
+    color: #050e80;
+}
+
+.end-of-year {
+    background-color: #f7f0da;
+}
+
+.current-week {
+    background-color: #d5e4cc;
+}
+
+.card {
+    position: relative;
+    min-height: 50px !important;
+    max-width: 250px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #888888;
+}
+
+.card-story {
+    border: solid thin black;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.cards-column {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-icon {
+    float: right;
+    height: 20px;
+    width: 20px;
+    margin: 2px;
+}
+
+.card-icons {
+    position: absolute;
+    z-index: 99;
+    bottom: -10px;
+    margin-right: -16px;
+    width: 150px;
+    height: 25px;
+    float: right;
+}
+
+.card-link {
+    word-wrap: break-word;
+    display: block;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.total-size {
+    background-color: rgb(118, 162, 250);
+    color: rgb(255, 255, 255);
+    border: 2px solid #6078ff;
+    text-align: center;
+    padding: 2px;
+}
+
+.total-comments {
+    color: rgb(164, 164, 164);
+}
+
+.total-left {
+    font-style: italic;
+    font-size: x-large;
+}
+
+table.center-align td {
+    text-align: center;
+}
+
+
+.blocker_style {
+    padding: 3px 5px 3px 5px;
+    margin: 3px 0 3px 0;
+}
+
+.blocker_status_Closed
+{
+    color: black;
+    text-decoration: line-through;
+    background-color: #e4e4e4;
+}
+.blocker_status_Closed:hover
+{
+    text-decoration: line-through;
+    background-color: #cccccc;
+    color: black;
+}
+
+.blocker_status_table>thead>tr>td,
+.blocker_status_table>thead>tr>th,
+.blocker_status_table>tbody>tr>th,
+.blocker_status_table>tbody>tr>td
+{
+    padding: 0 !important;
+}
+
+.tooltip-inner {
+    max-width: 800px;
+}
+
+.main {
+    height: 100%;
+}
+
+.login-form {
+    width: 400px;
+}
+
+.login-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("/img/background.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+
+.register-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("/img/background.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.register-form {
+    width: 400px;
+}
+
+
+
+/* Icons bar module*/
+
+.icons-bar {
+    height: 25px;
+}
+
+.icon-bar__icon-wrapper {
+    display: inline-block;
+}
+
+.icons-bar__icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+.icons-bar__badge {
+    min-width: 20px;
+    height: 20px;
+    margin-left: 2px;
+    border-radius: 3px;
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: default;   
+}
+
+/* End of icons bar module */
+
+
+/* Card block */
+
+.card {
+    min-height: 200px;
+    background-color: lightblue;
+    border-radius: 4px;
+    box-shadow: 3px 3px 5px #888888;
+    padding: 5px;
+    position: relative;
+}
+
+.card__icons-right {
+    position: absolute;
+    bottom: -15px;
+    right: 5px;
+}
+
+.card__icons-left {
+    position: absolute;
+    bottom: -15px;
+    left: 5px;
+}
+
+.card__main-value {
+    text-align: center;
+    font-style: italic;
+    font-size: xx-large;
+    position: absolute;
+    bottom: 10px;
+    right: 16px;
+}
+
+.card__details {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.card__details__icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* End of card block */
+
+/* Progress bar module */
+.card-progress
+{
+    height: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/* End of progress bar module */
+
+/* Summary block */
+.group-summary {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+.group-summary__icons {
+    float: right;
+}
+
+.group-summary__label {
+    min-width: 20px;
+    height: 20px;
+    margin-left: 3px;
+    border-radius: 3px;
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: default;
+    display: inline-block;
+}
+
+.group-summary__label:first-child {
+    margin-left: 0px;
+}
+
+.group-summary__cards {
+    float: left;
+    font-size: small;
+    color: lightgrey;
+}
+
+/* End of summary block */
+
+/* Legend block */
+
+.legend {
+
+}
+
+.legend__icon {
+    width: 16px;
+    height: 16px;
+}
+
+.legend__item {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* End of legend block */
+
+/* Filter block */
+.filter__group-name {
+    font-weight: bold;
+}
+
+/* End of Filter block */
+
+
+/* Admin Module */
+.admin__groups {
+    float: left;
+    width: 250px;
+}
+.admin__page {
+    margin-left: 260px;
+    width: calc(100% - 250px);
+}
+/* End of admin module */
+
+/* Users Module */
+.users__users-table {
+    width: 50%;
+}
+
+.users__permissions-table {
+    width: 50%;
+}
+
+/* End of isers module */

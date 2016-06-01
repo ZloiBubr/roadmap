@@ -1,0 +1,27 @@
+{
+    "port": 3000,
+    "appSecret": "roadmapSecret",
+    "jiraAPIProtocol": "https",
+    "jiraUrl": "ibxpress.atlassian.net",
+    "jiraPort": 443,
+    "jiraBrowseUri": "https://ibxpress.atlassian.net/browse/",
+    "rootName": "ibx_admin",
+    "rootPassword": "ibx_admin-16",
+    "crashEmailRecipients": "siarhei.hladkou@gmail.com",
+    "crashEmailFrom": "reporttool.server@gmail.com",
+    "crashEmailPassword": "201420152016",
+    "mongoose": {
+        "uri": "mongodb://localhost/roadmap",
+        "options": {
+            "server": {
+                "socketOptions": {
+                    "keepAlive": 1
+                }
+            }
+        }
+    },
+    "project": "EMR",
+    "jira": {
+        "url": "https://ibxpress.atlassian.net"
+    }
+}

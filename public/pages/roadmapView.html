@@ -1,0 +1,69 @@
+<div id="container" class="container-fluid" ng-controller="roadmapController">
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+            <form class="navbar-form navbar-left" role="search">
+                <label class="label label-primary" for="versionCombo">Filter by Version:</label>
+                <div class="form-group">
+                    <select class="form-control" id="versionCombo" ng-model="filteredVersion"
+                            ng-change="onFilterChange()" ng-options="version.name as version.name for version in allVersions"></select>
+                </div>
+                <label class="label label-primary">Legend:</label>
+                <label class="label open border-black"><a>Open</a></label>
+                <label class="label development border-black"><a>Development</a></label>
+                <label class="label quality-assurance border-black"><a>Quality Assurance</a></label>
+                <label class="label closed border-black"><a>Closed</a></label>
+            </form>
+
+            <p class="navbar-text navbar-right" ng-controller="versionController">Last Updated: {{versionData.version.updatedText}}</p>
+        </div>
+    </nav>
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Version</th>
+                <th ng-repeat = "component in components">{{component}}</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat = "dataRow in roadmapDataRows">
+                    <td>{{dataRow.version}}</td>
+                    <td ng-repeat = "component in dataRow.components">
+                        <ul class="cards-column">
+                            <li class="card" ng-repeat = "epic in component.epics">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td ng-class="{
+                                            closed: epic.epic.status == 'Closed',
+                                            open: epic.epic.status == 'Open',
+                                            development: epic.epic.status == 'Development',
+                                            'quality-assurance': epic.epic.status == 'Quality assurance',
+                                            'bg-info': true}">
+                                                <a class="card-link" href="{{epic.epic.uri}}">{{epic.epic.summary}}</a>
+                                            </td>
+                                            <td>
+                                                <ul class="cards-column" ng-repeat = "story in epic.stories">
+                                                    <li class="card-story" ng-class="{
+                                            closed: story.status == 'Closed',
+                                            open: epic.epic.status == 'Open',
+                                            development: epic.epic.status == 'Development',
+                                            'quality-assurance': story.status == 'Quality assurance',
+                                            'bg-info': true}">
+                                                        <a class="card-link" href="{{story.uri}}">{{story.summary}}</a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>

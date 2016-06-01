@@ -1,0 +1,18 @@
+<ul class="list-group">
+	<li ng-repeat="status in config" ng-style="{'background-color': status.color}" class="list-group-item">
+	    <div class="checkbox">
+	        <label>
+	        	<input type="checkbox" ng-model="status.isChecked" ng-change="selectStatus()">{{status.name}}
+	        </label>
+	        <span class="badge pull-right">{{(data | filterMultiple:status.criteria).length}}</span>
+	    </div>                   
+	</li>
+	<li class="list-group-item">
+	    <div class="checkbox">
+	        <label>
+	        	<input type="checkbox" ng-model="total.isChecked" ng-change="selectTotal(total.isChecked)">Total
+	        </label>
+	        <span class="badge pull-right">{{data.length}}</span>
+	    </div>                   
+	</li>
+</ul>

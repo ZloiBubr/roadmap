@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+    <thead class="bg-info">
+        <tr>
+            <th ng-if="grid.groupBy && grid.groupBy.length > 0">
+                <span ng-repeat="group in grid.groupBy">{{group.alias}}<span ng-if="!$last"> : </span></span>
+            </th>
+            <th style="min-width: 150px" ng-repeat="column in gridModel.columns">{{column.displayValue}}</th>
+        </tr>
+    </thead>
+    <tbody infinite-scroll="loadData()" infinite-scroll-distance="5">
+        <tr ng-repeat = "group in renderedGroups">
+            <th ng-if="grid.groupBy && grid.groupBy.length > 0">
+                <span ng-repeat="grp in grid.groupBy">{{group.group[grp.field]}}<span ng-if="!$last"> : </span></span>
+            </th>
+            <td ng-repeat="col in group.columns">
+                
+                <rpt-summary config="grid.summary" data="col.items"></rpt-summary>
+
+                <ul ng-show="grid.showCards" class="cards-column">
+                    <li ng-repeat="card in col.cards" class="card-full card-module">
+                        <rpt-card></rpt-card>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,33 @@
+{
+  "name": "Roadmap",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "async": "*",
+    "bcrypt": "^0.8.4",
+    "body-parser": "*",
+    "connect": "*",
+    "cookie": "*",
+    "cookie-parser": "*",
+    "debug": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-jwt": "^3.0.1",
+    "express-session": "*",
+    "jira": "*",
+    "jsonwebtoken": "^5.0.2",
+    "mongodb": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "nconf": "*",
+    "node_cache": "*",
+    "nodemailer": "*",
+    "q": "*",
+    "serve-favicon": "*",
+    "underscore": "*",
+    "winston": "*"
+  }
+}

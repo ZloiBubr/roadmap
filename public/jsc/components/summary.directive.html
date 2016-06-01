@@ -1,0 +1,12 @@
+<div class="group-summary">
+	<div>
+		<div ng-repeat="label in config.labels" ng-style="{'background-color': label.color}" title="{{label.name}}" class="group-summary__label">
+		{{evalExpression(label.expression) | number: 0}}
+		</div>
+	</div>
+	
+	<rpt-progress-bar ng-repeat="bar in config.progressbars" value="{{evalExpression(bar.expression)}}" type="{{bar.type}}" title="{{bar.name}}"></rpt-progress-bar>
+
+	<div class="group-summary__cards">Cards: {{data.length}}</div>
+	<rpt-icons config="config.icons" data="data" class="group-summary__icons"></rpt-icons>
+</div>

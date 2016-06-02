@@ -9,7 +9,6 @@ body {
 
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    padding-top: 70px;
 }
 
 a {
@@ -18,6 +17,10 @@ a {
 
 table {
     max-width: 4000px !important;
+}
+
+.padding-top {
+    padding-top: 70px;
 }
  /*------------------------------------Common---------------------------*/
 .progress_no_top_line > td {
@@ -325,7 +328,7 @@ table.center-align td {
     flex-direction: column;
     justify-content: center;
     background: url("/img/background.jpg");
-    background-position: center;
+    background-position: center top;
     background-size: 100% 100%;
 }
 

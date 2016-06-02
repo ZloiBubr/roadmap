@@ -65,12 +65,12 @@ function getRoadmapData(rootCallback) {
 
             roadmapData.Components = Object.keys(components);
 
-            _.sortBy(roadmapData.Epics, function(o) {
-                return o.name;
+            roadmapData.Epics.sort(function (o1, o2) {
+                var a = o1.name;
+                var b = o2.name;
+                return a > b ? 1 : a < b ? -1 : 0;
             });
-            _.sortBy(roadmapData.Components, function(name) {
-                return name;
-            });
+            roadmapData.Components.sort();
 
             roadmapData.Components.push("Undefined");
             rootCallback(roadmapData);
